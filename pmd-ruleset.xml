@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Practice7 Metrics Ruleset"
+  xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.github.io/pmd-6.55.0/ruleset_xml_schema.xsd">
+  <description>
+    Custom PMD ruleset for Practice 7 metrics:
+    LoC, CC, WMC, CBO, and LCOM (or closest related PMD rules).
+  </description>
+
+  <!-- LoC -->
+  <rule ref="category/java/design.xml/NcssCount" />
+
+  <!-- CC -->
+  <rule ref="category/java/design.xml/CyclomaticComplexity" />
+
+  <!-- CBO -->
+  <rule ref="category/java/design.xml/CouplingBetweenObjects" />
+
+  <!-- WMC + LCOM (closest related metric-based class quality rules) -->
+  <rule ref="category/java/design.xml/TooManyMethods" />
+  <rule ref="category/java/design.xml/GodClass" />
+</ruleset>
